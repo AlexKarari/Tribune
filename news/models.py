@@ -50,6 +50,10 @@ class Article(models.Model):
         news = cls.objects.filter(title__icontains=search_term)
         return news
 
+
+class NewsLetterRecipients(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
     
 
 
